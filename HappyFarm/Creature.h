@@ -15,7 +15,7 @@ class State;
 class Creature {
 public:
 	enum CreatureType {
-		ANIMAL, MONSTER
+		ANIMAL, MONSTER, PLANT//新增plant
 	};
 	Creature(CreatureType type = CreatureType::ANIMAL, Farm* farm = nullptr, string name = "");
 	~Creature();
@@ -41,6 +41,48 @@ protected:
 	Farm* farm;//该Creature实例所处农场
 	string name;
 	CreatureType creatureType;
+};
+
+class Plant :public Creature 
+{
+public:
+	enum PlantType {
+		CABBAGE, GRASS, POTATO, PEA
+	};
+	Plant(PlantType pType) {
+		this->plantType = pType;
+	}
+	virtual ~Plant() = 0;
+	int getRefCount(){
+		return ref;
+	}
+private:
+	PlantType plantType;
+	int ref;
+};
+
+class Cabbage :public Plant
+{
+	Cabbage();
+	~Cabbage(){}
+};
+
+class Grass :public Plant
+{
+	Grass();
+	~Grass() {}
+};
+
+class Potato :public Plant
+{
+	Potato();
+	~Potato() {}
+};
+
+class Pea :public Plant
+{
+	Pea();
+	~Pea() {}
 };
 
 class Animal :public Creature {

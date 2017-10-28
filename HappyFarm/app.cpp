@@ -39,4 +39,6 @@ int main() {
 	cout << "Event number(farm id:" << farm->getId() << "): " << farm->CountAndCleanEvents() << endl;
 
 	delete farm;
+
+
 }
