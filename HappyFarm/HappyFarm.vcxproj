@@ -142,6 +142,7 @@
     <ClInclude Include="Event.h" />
     <ClInclude Include="Farm.h" />
     <ClInclude Include="FarmFramework.h" />
+    <ClInclude Include="Farmland.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="State.h" />
     <ClInclude Include="Tool.h" />
@@ -151,6 +152,7 @@
     <ClCompile Include="Creature.cpp" />
     <ClCompile Include="Event.cpp" />
     <ClCompile Include="Farm.cpp" />
+    <ClCompile Include="Farmland.cpp" />
     <ClCompile Include="State.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
